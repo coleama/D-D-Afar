@@ -1,0 +1,50 @@
+{
+  "-MiBsfuTafbEQ7eAULxV": {
+    "className": "Barbarian",
+    "firebaseKey": "-MiBsfuTafbEQ7eAULxV",
+    "description": "A fierce warrior who can enter a battle rage",
+    "imageURL": "https://i.pinimg.com/originals/c7/fe/25/c7fe251cd11a2ecb590d7d9efa596a49.png"
+  },
+  "-MiBt86VzkC-EGmJnxjm": {
+    "firebaseKey": "-MiBt86VzkC-EGmJnxjm",
+    "className": "Bard",
+    "description": "An inspiring magician whose power echoes the music of creation",
+    "imageURL": "https://i.pinimg.com/originals/28/c7/95/28c795e4db4c71da104642b271964c3a.png"
+  },
+  "-MiBtwf1BwN9pGavQeR3": {
+    "firebaseKey": "-MiBtwf1BwN9pGavQeR3",
+    "className": "Cleric",
+    "description": "A priestly champion who wields divine magic in service of a higher power",
+    "imageURL": "https://www.kindpng.com/picc/m/627-6275446_static-media-cleric-logo-536f9581-dnd-5e-cleric.png"
+  },
+  "-MiBuOfHv9NCKB_cneij": {
+    "firebaseKey": "-MiBuOfHv9NCKB_cneij",
+    "className": "Druid",
+    "description": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms",
+    "imageURL": "https://i.pinimg.com/736x/97/96/46/979646f11eddd53c027dba86dfc428df--players-handbook-nerd-art.jpg"
+  },
+  "-MiBulenBnY8by9Xn7q1": {
+    "firebaseKey": "-MiBulenBnY8by9Xn7q1",
+    "className": "Fighter",
+    "description": "A master of martial combat, skilled with a variety of weapons and armor",
+    "imageURL": "https://i.pinimg.com/originals/2c/8a/39/2c8a3940f4d506f7a7198a8035ae84c5.png"
+  },
+  "-MiBv9_aOEJQWoobjz_U": {
+    "firebaseKey": "-MiBv9_aOEJQWoobjz_U",
+    "className": "Wizard",
+    "description": "A scholarly magic-user capable of manipulating the structures of reality",
+    "imageURL": "https://dreionsden.files.wordpress.com/2019/08/dnd5e_classsymb_wizard.png?w=1200"
+  },
+  "-MiBvQiWr6XNwNa1i3-0": {
+    "firebaseKey": "-MiBvQiWr6XNwNa1i3-0",
+    "className": "Paladin",
+    "description": "A holy warrior bound to a sacred oath",
+    "imageURL": "https://i.pinimg.com/originals/ed/6a/cb/ed6acb4c1a9381e1efb232d4ea0916ea.jpg"
+  },
+  "-MiBw4tCvNZd23yTVDQw": {
+    "firebaseKey": "-MiBw4tCvNZd23yTVDQw",
+    "className": "Rogue",
+    "description": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
+    "imageURL": "https://i.pinimg.com/originals/bb/70/66/bb70661930e5533fcf2fb396855b0aa5.png"
+  }
+}
