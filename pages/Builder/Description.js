@@ -33,8 +33,9 @@ function BackStoryForm() {
         <Button variant="primary" className="m-2">Next</Button>
       </Link>
       <Form onSubmit={handleSubmit}>
-        <Form.Label>backStory</Form.Label>
+        <Form.Label>Write A Short Backstory For your Character!</Form.Label>
         <Form.Control
+          className="w-50"
           type="text"
           placeholder="Short Character BackStory"
           name="backStory"
