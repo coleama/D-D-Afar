@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import 'animate.css';
 import Form from 'react-bootstrap/Form';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
@@ -25,7 +26,7 @@ function NameForm() {
     setFormInput(initialState);
   };
   return (
-    <div>
+    <div className="animate__animated animate__bounceInDown">
       <Link href="/Builder/Renders/ClassSelectorRender" passHref>
         <Button variant="primary" className="m-2">Next</Button>
       </Link>

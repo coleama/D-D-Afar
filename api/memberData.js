@@ -3,6 +3,23 @@ import { clientCredentials } from '../utils/client';
 const endpoint = clientCredentials.databaseURL;
 
 // TODO: GET members
+const getUsersMembers = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/members.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
 const getAllMembers = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/members.json`, {
     method: 'GET',
@@ -107,4 +124,5 @@ export {
   deleteMember,
   getSingleMember,
   updateMember,
+  getUsersMembers,
 };

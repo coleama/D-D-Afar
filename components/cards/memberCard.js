@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deleteMember } from '../../api/memberData';
+import { useAuth } from '../../utils/context/authContext';
 
 export default function MemberCard({ memberObj, onUpdate }) {
   const deleteThisMember = () => {
@@ -13,7 +14,7 @@ export default function MemberCard({ memberObj, onUpdate }) {
     }
   };
   console.warn(memberObj);
-
+  const { user } = useAuth();
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Body>
@@ -31,12 +32,16 @@ export default function MemberCard({ memberObj, onUpdate }) {
         <Link href={`/member/${memberObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
+        {memberObj.uid === user.uid && (
         <Link href={`/member/editMember/${memberObj.firebaseKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>
+        ) }
+        {memberObj.uid === user.uid && (
         <Button variant="danger" onClick={deleteThisMember} className="m-2">
           DELETE
         </Button>
+        )}
       </Card.Body>
     </Card>
   );

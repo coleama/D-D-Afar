@@ -14,7 +14,7 @@ export default function RaceSelection() {
   }, []);
   console.warn(raceData);
   return (
-    <>
+    <div className="animate__animated animate__bounceInRight">
       <Link href="/Builder/Renders/ClassSelectorRender" passHref>
         <Button variant="primary" className="m-2">Previous</Button>
       </Link>
@@ -35,6 +35,6 @@ export default function RaceSelection() {
           <div>Loading...</div>
         )}
       </div>
-    </>
+    </div>
   );
 }

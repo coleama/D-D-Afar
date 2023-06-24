@@ -1,12 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-
-import NameRender from './Builder/Renders/NameRender';
+import MembersOnDom from './membersOnDom';
 // import StatsRender from './Builder/StatsRender';
 
 function Home() {
   return (
     <>
-      <NameRender />
+      <MembersOnDom />
     </>
   );
 }

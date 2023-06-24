@@ -1,14 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import 'animate.css';
-import { getAllMembers } from '../api/memberData';
+import { getUsersMembers } from '../api/memberData';
 import MemberCard from '../components/cards/memberCard';
+import { useAuth } from '../utils/context/authContext';
 
-export default function MembersOnDom() {
+export default function UserMembersOnDom() {
   const [member, setMember] = useState([]);
+  const { user } = useAuth();
 
   const getEveryone = () => {
-    getAllMembers().then(setMember);
+    getUsersMembers(user.uid).then(setMember);
   };
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function MembersOnDom() {
   }, []);
 
   return (
-    <div className="animate__animated animate__bounceInDown">
+    <>
       <div className="text-center my-4">
         <div className="d-flex flex-wrap">
           {member.map((memberObj) => (
@@ -25,6 +26,6 @@ export default function MembersOnDom() {
         </div>
 
       </div>
-    </div>
+    </>
   );
 }

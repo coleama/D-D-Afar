@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deletePartyMembers } from '../../api/mergedData';
+import { useAuth } from '../../utils/context/authContext';
 
 export default function PartyCard({ partyObj, onUpdate }) {
   const deleteThisParty = () => {
@@ -11,7 +12,7 @@ export default function PartyCard({ partyObj, onUpdate }) {
       deletePartyMembers(partyObj.firebaseKey).then(() => onUpdate());
     }
   };
-
+  const { user } = useAuth();
   return (
     <>
       <Card style={{ width: '18rem', margin: '10px' }}>
@@ -22,12 +23,16 @@ export default function PartyCard({ partyObj, onUpdate }) {
           <Link href={`/party/${partyObj.firebaseKey}`} passHref>
             <Button variant="primary" className="m-2">VIEW</Button>
           </Link>
+          {partyObj.uid === user.uid && (
           <Link href={`/party/editParty/${partyObj.firebaseKey}`} passHref>
             <Button variant="info">EDIT</Button>
           </Link>
+          )}
+          {partyObj.uid === user.uid && (
           <Button variant="danger" onClick={deleteThisParty} className="m-2">
             DELETE
           </Button>
+          )}
         </Card.Body>
       </Card>
     </>
@@ -36,6 +41,7 @@ export default function PartyCard({ partyObj, onUpdate }) {
 
 PartyCard.propTypes = {
   partyObj: PropTypes.shape({
+    uid: PropTypes.string,
     party_name: PropTypes.string,
     image: PropTypes.string,
     favorite: PropTypes.bool,
