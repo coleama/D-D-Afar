@@ -35,7 +35,7 @@ function PartyForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updateParty(formInput)
-        .then(() => router.push(`/parties/${obj.firebaseKey}`));
+        .then(() => router.push('/'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createParty(payload).then(() => {
@@ -45,7 +45,7 @@ function PartyForm({ obj }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className="animate__animated animate__bounceInDown" onSubmit={handleSubmit}>
       <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Party</h2>
 
       {/* Party Name */}

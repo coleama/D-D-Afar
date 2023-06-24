@@ -25,8 +25,8 @@ function BackStoryForm() {
     setFormInput(initialState);
   };
   return (
-    <div>
-      <Link href="/Builder/Renders/Stats" passHref>
+    <div className="animate__animated animate__bounceInRight">
+      <Link href="/Builder/Renders/StatsRender" passHref>
         <Button variant="primary" className="m-2">Previous</Button>
       </Link>
       <Link href="/Builder/Renders/overViewRender" passHref>

@@ -35,8 +35,8 @@ function StatsForm() {
   };
 
   return (
-    <div>
-      <Link href="/Builder/Renders/Race" passHref>
+    <div className="animate__animated animate__bounceInRight">
+      <Link href="/Builder/Renders/RaceRender" passHref>
         <Button variant="primary" className="m-2">Previous</Button>
       </Link>
       <Link href="/Builder/Renders/descriptionRender" passHref>

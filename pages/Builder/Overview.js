@@ -48,7 +48,7 @@ export default function ViewMember() {
   };
   // console.warn(storedClassData);
   return (
-    <>
+    <div className="animate__animated animate__bounceInRight">
       <Link href="/Builder/Renders/descriptionRender" passHref>
         <Button variant="primary" className="m-2">Previous</Button>
       </Link>
@@ -67,6 +67,6 @@ export default function ViewMember() {
           <Button onClick={handleClick}>Save your Adventurer!</Button>
         </Card.Body>
       </Card>
-    </>
+    </div>
   );
 }

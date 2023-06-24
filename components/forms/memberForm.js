@@ -47,7 +47,7 @@ function MemberForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updateMember(formInput)
-        .then(() => router.push(`/members/${obj.firebaseKey}`));
+        .then(() => router.push('/'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createMember(payload).then(() => {

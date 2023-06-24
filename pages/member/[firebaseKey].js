@@ -16,23 +16,52 @@ export default function ViewMember() {
   }, [firebaseKey]);
 
   return (
-    <div className="mt-5 d-flex flex-wrap">
-      <div className="d-flex flex-column">
-        <img src={memberDetails.image} alt={memberDetails.char_name} style={{ width: '300px' }} />
+    <div className="character-sheet">
+      <h1>Character Sheet</h1>
+      <div className="character-info">
+        <div className="info-section">
+          <h2>{memberDetails.char_name}</h2>
+          <input type="text" />
+        </div>
+        <div className="info-section">
+          <h2>{memberDetails.className}</h2>
+          <input type="text" />
+        </div>
+        <div className="info-section">
+          <h2>Level</h2>
+          <input type="number" min="1" />
+        </div>
+        <div className="info-section">
+          <h2>{memberDetails.raceName}</h2>
+          <input type="text" />
+        </div>
       </div>
-      <div className="text-white ms-5 details">
-        <h2>
-          Name: {memberDetails.char_name}, Class: {memberDetails.class}, Level: {memberDetails.level}
-        </h2>
-        <h6>Character Stats: </h6>
-        <p>Strength: {memberDetails.strength}</p>
-        <p>Dexterity: {memberDetails.dexterity}</p>
-        <p>Wisdom: {memberDetails.wisdom}</p>
-        <p>Intelligence: {memberDetails.intelligence}</p>
-        <p>Charisma: {memberDetails.charisma}</p>
-        <p>Constitution: {memberDetails.constitution}</p>
-        <p>Strength: {memberDetails.strength}</p>
-        <hr />
+      <div className="ability-scores">
+        <h2>Ability Scores</h2>
+        <div className="ability-section">
+          <label htmlFor="strength">Strength:</label>
+          <input type="number" id="strength" min="1" />
+        </div>
+        <div className="ability-section">
+          <label htmlFor="dexterity">Dexterity:</label>
+          <input type="number" id="dexterity" min="1" />
+        </div>
+        <div className="ability-section">
+          <label htmlFor="constitution">Constitution:</label>
+          <input type="number" id="constitution" min="1" />
+        </div>
+        <div className="ability-section">
+          <label htmlFor="intelligence">Intelligence:</label>
+          <input type="number" id="intelligence" min="1" />
+        </div>
+        <div className="ability-section">
+          <label htmlFor="wisdom">Wisdom:</label>
+          <input type="number" id="wisdom" min="1" />
+        </div>
+        <div className="ability-section">
+          <label htmlFor="charisma">Charisma:</label>
+          <input type="number" id="charisma" min="1" />
+        </div>
       </div>
     </div>
   );
